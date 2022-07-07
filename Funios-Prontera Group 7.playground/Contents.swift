@@ -65,39 +65,67 @@ let umurTasya = 12
 //    print("belum lulus")
 //}
 
+//let bahan = "bayam"
+//
+//switch bahan {
+//case "pisang", "apple":
+//    print("Buah-buahan")
+//case "kangkung", "bayam":
+//    print("Sayuran")
+//default:
+//    print("Bahan tidak terdaftar")
+//}
+//
+//let usiaAnak = 20
+//
+//switch usiaAnak {
+//case 0...5:
+//    print("Balita")
+//case 6...12:
+//    print("Sekolah Dasar")
+//case 13...15:
+//    print("Sekolah Menangah Pertama")
+//case 16...17:
+//    print("Sekolah Menangah Atas")
+//default:
+//    print("Mahasiswa")
+//}
+//
+//let errorCode = 404
+//switch errorCode {
+//case 404:
+//    print("Data not found")
+//case 401:
+//    print("Insertion failure")
+//default:
+//    print("Unknown error")
+//}
 
-let bahan = "bayam"
+
+enum Bahan {
+    case sayuran(String)
+    case buahBuahan(String)
+}
+
+let bahan: Bahan = .buahBuahan("pisang")
 
 switch bahan {
-case "pisang", "apple":
-    print("Buah-buahan")
-case "kangkung", "bayam":
-    print("Sayuran")
-default:
-    print("Bahan tidak terdaftar")
+case .sayuran(let namaSayur):
+    print("Sayurnya adalah \(namaSayur) ")
+case .buahBuahan(let namaBuah):
+    print("Buahnya adalah \(namaBuah) ")
 }
 
-let usiaAnak = 20
-
-switch usiaAnak {
-case 0...5:
-    print("Balita")
-case 6...12:
-    print("Sekolah Dasar")
-case 13...15:
-    print("Sekolah Menangah Pertama")
-case 16...17:
-    print("Sekolah Menangah Atas")
-default:
-    print("Mahasiswa")
+enum TypeKendaraan {
+    case mobil
+    case motor
 }
 
-let errorCode = 404
-switch errorCode {
-case 404:
-    print("Data not found")
-case 401:
-    print("Insertion failure")
-default:
-    print("Unknown error")
+let kendaraan: TypeKendaraan = .mobil
+switch kendaraan {
+case .mobil:
+    print("Mobil")
+case .motor:
+    print("motor")
 }
+
