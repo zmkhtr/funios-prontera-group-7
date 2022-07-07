@@ -16,4 +16,10 @@ var tinggiBadan: Double = 12.0
 let sudahLulus: Bool = true
 let inisial: Character = "A"
 
-print("Nama saya \(name) saya berumur \(umur) tahun, tinggi saya \(tinggiBadan) cm")
+//print("Nama saya \(name) saya berumur \(umur) tahun, tinggi saya \(tinggiBadan) cm")
+
+print("5 + 4 = \(5 + 4)")
+print("5 - 4 = \(5 - 4)")
+print("5 / 4 = \(5 / 4)")
+print("5 * 4 = \(5 * 4)")
+print("5 % 4 = \(5 % 4)")
