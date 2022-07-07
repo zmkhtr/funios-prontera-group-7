@@ -8,7 +8,7 @@ let kotakDua = 18 // tidak bisa dirubah
 
 let kotakTiga: String = "20" // ini variabel dengan type data
 
-print("Isi kotak tiga adalah \(kotakTiga)")
+//print("Isi kotak tiga adalah \(kotakTiga)")
 
 var umur: Int = 12
 let name: String = "Azam"
@@ -16,4 +16,4 @@ var tinggiBadan: Double = 12.0
 let sudahLulus: Bool = true
 let inisial: Character = "A"
 
-
+print("Nama saya \(name) saya berumur \(umur) tahun, tinggi saya \(tinggiBadan) cm")
