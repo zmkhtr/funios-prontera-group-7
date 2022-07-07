@@ -47,10 +47,20 @@ let umurTasya = 12
 //print("Broto lebih kecil dari tasya \(umurBroto <= umurTasya)")
 
 // Jika umur anak sudah 12 tahun boleh daftar SMP
-if umurBroto >= 12 {
-    print("Broto boleh daftar SMP")
-} else if umurBroto >= 6 {
-    print("Broto boleh daftar SD")
+//if umurBroto >= 12 {
+//    print("Broto boleh daftar SMP")
+//} else if umurBroto >= 6 {
+//    print("Broto boleh daftar SD")
+//} else {
+//    print("Broto tidak boleh daftar sekolah")
+//}
+
+let isGraduated = false
+let hasilDariKelulusan = isGraduated ? "sudah lulus" : "belum lulus"
+print("Broto \(hasilDariKelulusan) SD")
+
+if isGraduated {
+    print("sudah lulus")
 } else {
-    print("Broto tidak boleh daftar sekolah")
+    print("belum lulus")
 }
