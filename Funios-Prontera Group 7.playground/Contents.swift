@@ -23,3 +23,12 @@ print("5 - 4 = \(5 - 4)")
 print("5 / 4 = \(5 / 4)")
 print("5 * 4 = \(5 * 4)")
 print("5 % 4 = \(5 % 4)")
+
+var angka1Int = 5
+var angka2Int = 4
+
+var angka1Double = 5.0
+var angka2Double = 4.0
+
+print("Pembagian Int \(angka1Int / angka2Int)")
+print("Pembagian Double \(angka1Double / angka2Double)")
