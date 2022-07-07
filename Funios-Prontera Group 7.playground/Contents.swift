@@ -18,11 +18,11 @@ let inisial: Character = "A"
 
 //print("Nama saya \(name) saya berumur \(umur) tahun, tinggi saya \(tinggiBadan) cm")
 
-print("5 + 4 = \(5 + 4)")
-print("5 - 4 = \(5 - 4)")
-print("5 / 4 = \(5 / 4)")
-print("5 * 4 = \(5 * 4)")
-print("5 % 4 = \(5 % 4)")
+//print("5 + 4 = \(5 + 4)")
+//print("5 - 4 = \(5 - 4)")
+//print("5 / 4 = \(5 / 4)")
+//print("5 * 4 = \(5 * 4)")
+//print("5 % 4 = \(5 % 4)")
 
 var angka1Int = 5
 var angka2Int = 4
@@ -30,8 +30,19 @@ var angka2Int = 4
 var angka1Double = 5.0
 var angka2Double = 4.0
 
-print("Pembagian Int \(angka1Int / angka2Int)")
-print("Pembagian Double \(angka1Double / angka2Double)")
+//print("Pembagian Int \(angka1Int / angka2Int)")
+//print("Pembagian Double \(angka1Double / angka2Double)")
 
 let hasilPembagian = String(angka1Double / angka2Double)
-print("Hasil pembagian " + hasilPembagian)
+//print("Hasil pembagian " + hasilPembagian)
+
+let umurBroto = 10
+let umurTasya = 12
+// < > == != >= <=
+print("Broto lebih kecil dari tasya \(umurBroto < umurTasya)")
+print("Broto lebih tua dari tasya \(umurBroto > umurTasya)")
+print("Broto seumuran dengan tasya \(umurBroto == umurTasya)")
+print("Umur broto tidak sama dengan tasya \(umurBroto != umurTasya)")
+print("Broto lebih tua dari tasya \(umurBroto >= umurTasya)")
+print("Broto lebih kecil dari tasya \(umurBroto <= umurTasya)")
+
