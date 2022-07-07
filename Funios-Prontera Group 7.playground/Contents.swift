@@ -36,13 +36,21 @@ var angka2Double = 4.0
 let hasilPembagian = String(angka1Double / angka2Double)
 //print("Hasil pembagian " + hasilPembagian)
 
-let umurBroto = 10
+let umurBroto = 5
 let umurTasya = 12
 // < > == != >= <=
-print("Broto lebih kecil dari tasya \(umurBroto < umurTasya)")
-print("Broto lebih tua dari tasya \(umurBroto > umurTasya)")
-print("Broto seumuran dengan tasya \(umurBroto == umurTasya)")
-print("Umur broto tidak sama dengan tasya \(umurBroto != umurTasya)")
-print("Broto lebih tua dari tasya \(umurBroto >= umurTasya)")
-print("Broto lebih kecil dari tasya \(umurBroto <= umurTasya)")
+//print("Broto lebih kecil dari tasya \(umurBroto < umurTasya)")
+//print("Broto lebih tua dari tasya \(umurBroto > umurTasya)")
+//print("Broto seumuran dengan tasya \(umurBroto == umurTasya)")
+//print("Umur broto tidak sama dengan tasya \(umurBroto != umurTasya)")
+//print("Broto lebih tua dari tasya \(umurBroto >= umurTasya)")
+//print("Broto lebih kecil dari tasya \(umurBroto <= umurTasya)")
 
+// Jika umur anak sudah 12 tahun boleh daftar SMP
+if umurBroto >= 12 {
+    print("Broto boleh daftar SMP")
+} else if umurBroto >= 6 {
+    print("Broto boleh daftar SD")
+} else {
+    print("Broto tidak boleh daftar sekolah")
+}
