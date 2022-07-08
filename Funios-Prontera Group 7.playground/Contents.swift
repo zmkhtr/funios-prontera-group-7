@@ -186,4 +186,19 @@ func app() {
     }
 }
 
-app()
+var kumpulanAngka: [Int] = [1,2,3,4,5]
+
+print("kumpulan angka \(kumpulanAngka[4])")
+print("Array count \(kumpulanAngka.count)")
+print("Kumpulan angka sebelum ditambah \(kumpulanAngka)")
+kumpulanAngka.append(8)
+print("Kumpulan angka setelah ditambah \(kumpulanAngka)")
+kumpulanAngka.insert(10, at: 4)
+print("Kumpulan angka setelah ditambah di-index ke dua \(kumpulanAngka)")
+kumpulanAngka.append(contentsOf: [33,5,5,6,3])
+print("Kumpulan angka setelah ditambah array \(kumpulanAngka)")
+
+for (index, value) in kumpulanAngka.enumerated() {
+    print("Indexnya \(index) valuenya \(value)")
+}
+
