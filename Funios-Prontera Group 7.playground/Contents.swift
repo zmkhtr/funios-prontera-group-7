@@ -102,30 +102,40 @@ let umurTasya = 12
 //}
 
 
-enum Bahan {
-    case sayuran(String)
-    case buahBuahan(String)
+//enum Bahan {
+//    case sayuran(String)
+//    case buahBuahan(String)
+//}
+//
+//let bahan: Bahan = .buahBuahan("pisang")
+//
+//switch bahan {
+//case .sayuran(let namaSayur):
+//    print("Sayurnya adalah \(namaSayur) ")
+//case .buahBuahan(let namaBuah):
+//    print("Buahnya adalah \(namaBuah) ")
+//}
+//
+//enum TypeKendaraan {
+//    case mobil
+//    case motor
+//}
+//
+//let kendaraan: TypeKendaraan = .mobil
+//switch kendaraan {
+//case .mobil:
+//    print("Mobil")
+//case .motor:
+//    print("motor")
+//}
+
+
+for i in 0...10 {
+    if i % 2 == 0 {
+        print("Ganjil \(i)")
+    }
+    
+    if i % 4 == 0 {
+        print("Genap \(i)")
+    }
 }
-
-let bahan: Bahan = .buahBuahan("pisang")
-
-switch bahan {
-case .sayuran(let namaSayur):
-    print("Sayurnya adalah \(namaSayur) ")
-case .buahBuahan(let namaBuah):
-    print("Buahnya adalah \(namaBuah) ")
-}
-
-enum TypeKendaraan {
-    case mobil
-    case motor
-}
-
-let kendaraan: TypeKendaraan = .mobil
-switch kendaraan {
-case .mobil:
-    print("Mobil")
-case .motor:
-    print("motor")
-}
-
