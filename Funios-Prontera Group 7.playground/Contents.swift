@@ -132,10 +132,58 @@ let umurTasya = 12
 
 for i in 0...10 {
     if i % 2 == 0 {
-        print("Ganjil \(i)")
+//        print("Ganjil \(i)")
     }
     
     if i % 4 == 0 {
-        print("Genap \(i)")
+//        print("Genap \(i)")
     }
 }
+
+func penjumlahan() {
+    let angka1 = 50
+    let angka2 = 70
+    print("Hasil \(angka1 + angka2)")
+}
+//penjumlahan()
+
+func penjumlahanDenganParameter(angkaPertama a: Int, _ b: Int) {
+    print("Hasil dengan parameter \(a + b)")
+}
+
+//penjumlahanDenganParameter(angkaPertama: 39, 18)
+
+func namaSaya() -> String {
+    return "Azam"
+}
+
+let namaPengguna: String = namaSaya()
+//print(namaPengguna)
+
+func penjumlahanDuaAngka(_ x: Int, _ y: Int) -> Int {
+    return x + y
+}
+
+//print("Hasil return \(penjumlahanDuaAngka(20, 10))")
+
+func login(username: String, password: String) -> Bool {
+    if username == "Azam" && password == "Azam123" {
+        return true
+    }
+
+    return false
+}
+
+func app() {
+    let loginResult: Bool = login(username: "Azam", password: "Azam123")
+    
+    if loginResult {
+        // ke halaman profile
+        print("ke halaman profile")
+    } else {
+        // munculkan error
+        print("munculkan error")
+    }
+}
+
+app()
