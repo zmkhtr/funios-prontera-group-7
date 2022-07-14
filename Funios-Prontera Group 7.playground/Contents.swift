@@ -231,15 +231,15 @@ struct Mobil {
     let jumlahRoda: Int
     
     func majuKedepan(jarak: Int) {
-        print("Mobil \(merkMobil) maju kedepan \(jarak) meter")
+//        print("Mobil \(merkMobil) maju kedepan \(jarak) meter")
     }
 }
 
 var mobil: Mobil = Mobil(merkMobil: "Toyota", jumlahRoda: 4)
 
-print(mobil)
+//print(mobil)
 mobil.merkMobil = "Daihatsu"
-print(mobil.merkMobil)
+//print(mobil.merkMobil)
 
 mobil.majuKedepan(jarak: 39)
 
@@ -257,11 +257,11 @@ let movies = [cars, toyStory]
 
 
 for (index, value) in movies.enumerated() {
-    print("Index \(index) value \(value.title)")
+//    print("Index \(index) value \(value.title)")
 }
 
 for movie in movies {
-    print("Movienya \(movie.title)")
+//    print("Movienya \(movie.title)")
 }
 
 class MovieClass {
@@ -276,13 +276,13 @@ class MovieClass {
     }
     
     func nontonFilm() {
-        print("Menonton film \(title), year \(year)")
+//        print("Menonton film \(title), year \(year)")
     }
 }
 
 let pocong = MovieClass(imageURL: "anyurl.com/", title: "Pocong 3", year: 2018)
 pocong.year = 2020
-print("Pocong \(pocong.year)")
+//print("Pocong \(pocong.year)")
 pocong.nontonFilm()
 
 struct Persegi {
@@ -319,5 +319,60 @@ let hitung = MenghitungLuasBangunRuang(persegi:
 let luas = hitung.hitungLuas()
 let luasSegitiga = hitung.hitungLuasSegitiga()
 
-print("Luas: \(luas)")
-print("Luas Segitiga: \(luasSegitiga)")
+//print("Luas: \(luas)")
+//print("Luas Segitiga: \(luasSegitiga)")
+
+class Pendekar {
+    let nama: String
+    let nyawa: Int
+    let kekuatanMax: Int
+    let pertahananMax: Int
+
+    init(nama: String, kekuatanMax: Int, pertahananMax: Int, nyawa: Int) {
+        self.nama = nama
+        self.kekuatanMax = kekuatanMax
+        self.pertahananMax = pertahananMax
+        self.nyawa = nyawa
+    }
+
+    func serang() -> Int {
+        return Int.random(in: 1...self.kekuatanMax)
+    }
+
+    func bertahan() -> Int {
+        return Int.random(in: 1...self.pertahananMax)
+    }
+}
+
+class PendekarPlatina: Pendekar {
+
+    var powerUP: Int?
+
+    init(nama: String, kekuatanMax: Int, pertahananMax: Int, nyawa: Int, powerUP: Int?) {
+        super.init(nama: nama, kekuatanMax: kekuatanMax, pertahananMax: pertahananMax, nyawa: 100)
+        self.powerUP = powerUP
+    }
+
+    override func serang() -> Int {
+        if let powerUP = powerUP {
+            return Int.random(in: 1...self.kekuatanMax) + powerUP
+        }
+        return super.serang()
+    }
+
+    func serang(powerUP: Int) -> Int {
+        return super.serang() + powerUP
+    }
+
+}
+
+let wiroSableng = Pendekar(nama: "Wiro Sableng", kekuatanMax: 20, pertahananMax: 5, nyawa: 100)
+let dayaSerangWiro = wiroSableng.serang()
+
+print("Daya Serang Wiro \(dayaSerangWiro)")
+
+let gatotKaca = PendekarPlatina(nama: "Gatot Kaca", kekuatanMax: 20, pertahananMax: 10, nyawa: 120, powerUP: 50)
+let dayaSerangGatot = gatotKaca.serang(powerUP: 100)
+
+print("Daya Serang Gatot \(dayaSerangGatot)")
+
