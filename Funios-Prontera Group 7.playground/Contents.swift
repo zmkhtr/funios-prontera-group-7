@@ -263,3 +263,61 @@ for (index, value) in movies.enumerated() {
 for movie in movies {
     print("Movienya \(movie.title)")
 }
+
+class MovieClass {
+    let imageURL: String
+    let title: String
+    var year: Int
+    
+    init(imageURL: String, title: String, year: Int) {
+        self.imageURL = imageURL
+        self.title = title
+        self.year = year
+    }
+    
+    func nontonFilm() {
+        print("Menonton film \(title), year \(year)")
+    }
+}
+
+let pocong = MovieClass(imageURL: "anyurl.com/", title: "Pocong 3", year: 2018)
+pocong.year = 2020
+print("Pocong \(pocong.year)")
+pocong.nontonFilm()
+
+struct Persegi {
+    let tinggi: Int
+    let lebar: Int
+}
+
+struct Segitiga {
+    let tinggi: Int
+    let lebar: Int
+}
+
+class MenghitungLuasBangunRuang {
+    let persegi: Persegi
+    let segitiga: Segitiga
+    
+    init(persegi: Persegi, segitiga: Segitiga) {
+        self.persegi = persegi
+        self.segitiga = segitiga
+    }
+    
+    func hitungLuas() -> Int {
+        return persegi.lebar * persegi.tinggi
+    }
+    
+    func hitungLuasSegitiga() -> Int {
+        return segitiga.lebar * segitiga.tinggi
+    }
+}
+
+let hitung = MenghitungLuasBangunRuang(persegi:
+                                        Persegi(tinggi: 10, lebar: 20),
+                                       segitiga: Segitiga(tinggi: 12, lebar: 29))
+let luas = hitung.hitungLuas()
+let luasSegitiga = hitung.hitungLuasSegitiga()
+
+print("Luas: \(luas)")
+print("Luas Segitiga: \(luasSegitiga)")
