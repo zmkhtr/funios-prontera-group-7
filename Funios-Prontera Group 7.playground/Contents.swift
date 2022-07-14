@@ -207,7 +207,7 @@ var optionalVariable: Int?
 func isiVariabel() {
     optionalVariable = nil
 //    print("Variabelnya \(optionalVariable!)") //force unwrap
-    print("Variabelnya \(optionalVariable ?? 30)") //default value unwrap
+//    print("Variabelnya \(optionalVariable ?? 30)") //default value unwrap
     
 //    if let safeOptionalVariable = optionalVariable { // safe unwrap if let
 //        print("Variabelnya \(safeOptionalVariable)")
@@ -222,4 +222,44 @@ func isiVariabel() {
 //    return safeOptionalVariable
 }
 
-isiVariabel()
+//isiVariabel()
+
+//Int, String, Double
+
+struct Mobil {
+    var merkMobil: String
+    let jumlahRoda: Int
+    
+    func majuKedepan(jarak: Int) {
+        print("Mobil \(merkMobil) maju kedepan \(jarak) meter")
+    }
+}
+
+var mobil: Mobil = Mobil(merkMobil: "Toyota", jumlahRoda: 4)
+
+print(mobil)
+mobil.merkMobil = "Daihatsu"
+print(mobil.merkMobil)
+
+mobil.majuKedepan(jarak: 39)
+
+
+struct Movie {
+    let imageURL: String
+    let title: String
+    let year: Int
+}
+
+let cars = Movie(imageURL: "anyurl.com/", title: "Cars 3", year: 2018)
+let toyStory = Movie(imageURL: "anyurl.com/", title: "Toy story", year: 2022)
+
+let movies = [cars, toyStory]
+
+
+for (index, value) in movies.enumerated() {
+    print("Index \(index) value \(value.title)")
+}
+
+for movie in movies {
+    print("Movienya \(movie.title)")
+}
